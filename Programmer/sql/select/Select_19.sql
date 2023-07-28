@@ -22,9 +22,9 @@ where DATETIME = (
 SELECT name
 from(
     select name, 
-    to_number(to_char(DATETIME, 'YYYY')) as year, 
-    to_number(to_char(DATETIME, 'MM')) as month,
-    to_number(to_char(DATETIME, 'DD')) as day
+    to_char(DATETIME, 'YYYY') as year, 
+    to_char(DATETIME, 'MM') as month,
+    to_char(DATETIME, 'DD') as day
     from ANIMAL_INS 
     order by year, month, day
     )
